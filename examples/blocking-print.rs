@@ -8,6 +8,4 @@ fn main() -> std::io::Result<()> {
         socket.receive_packet(&mut packet)?;
         println!("The motor RPM is {}!", packet.rpm);
     }
-
-    Ok(())
 }

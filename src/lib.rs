@@ -1,3 +1,4 @@
+use ascii::AsciiChar;
 use bitflags::bitflags;
 
 #[cfg(feature = "blocking")]
@@ -10,7 +11,7 @@ pub mod nonblocking;
 #[repr(C)]
 pub struct OutGauge {
     pub time: u32,                    // packet time (ms)
-    pub car: [u8; 4],                 // car name
+    pub car: [AsciiChar; 4],          // car name
     pub flags: Flags,                 // flags
     pub gear: u8,                     // Reverse:0, Neutral:1, First:2...
     pub player_id: u8,                // Unique ID of viewed player (0 = none)
@@ -26,8 +27,8 @@ pub struct OutGauge {
     pub throttle: f32,                // 0-1 value
     pub brake: f32,                   // 0-1 value
     pub clutch: f32,                  // 0-1 value
-    pub display1: [u8; 16],           // usually fuel
-    pub display2: [u8; 16],           // usually settings
+    pub display1: [AsciiChar; 16],    // usually fuel
+    pub display2: [AsciiChar; 16],    // usually settings
     pub id: i32,                      // ID
 }
 
