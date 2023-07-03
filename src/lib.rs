@@ -1,3 +1,5 @@
+#![cfg_attr(not(feature = "std"), no_std)]
+
 use ascii::AsciiChar;
 use bitflags::bitflags;
 

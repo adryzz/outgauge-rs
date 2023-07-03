@@ -14,8 +14,9 @@ tokio = { version = "1.29.1", features = ["net"], optional = true }
 tokio = { version = "1.29.1", features = ["full"] }
 
 [features]
-default = ["tokio"]
-blocking = []
+default = ["std", "tokio"]
+std = []
+blocking = ["std"]
 
 [[example]]
 name = "async-print"
