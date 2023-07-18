@@ -8,6 +8,8 @@ edition = "2021"
 [dependencies]
 ascii = "1.1.0"
 bitflags = "2.3.3"
+embassy = { version = "0.0.0", optional = true }
+embassy-net = { version = "0.1.0", features = ["udp"], optional = true }
 tokio = { version = "1.29.1", features = ["net"], optional = true }
 
 [dev-dependencies]

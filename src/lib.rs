@@ -9,6 +9,9 @@ pub mod blocking;
 #[cfg(feature = "tokio")]
 pub mod nonblocking;
 
+#[cfg(all(feature = "embassy", feature = "embassy-net"))]
+pub mod embassy;
+
 #[derive(Debug, Clone, Copy)]
 #[repr(C)]
 pub struct OutGauge {
